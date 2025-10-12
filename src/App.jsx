@@ -1,40 +1,70 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Briefcase, Code, Mail, User, BookOpen, ArrowRight, Github, Linkedin, MessageSquare } from 'lucide-react';
+import { Briefcase, Code, Mail, User, BookOpen, ArrowRight, Github, Linkedin, MessageSquare, GraduationCap } from 'lucide-react';
 
 // --- Configuration Data ---
 const CONFIG = {
-  name: "Your Name",
-  taglines: ["Software Engineer", "Frontend Developer", "React Enthusiast", "Code Artisan"],
-  email: "your.email@example.com",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-  aboutMe: "Driven by a passion for creating impactful and beautiful web applications, I specialize in building robust, high-performance user interfaces. My expertise lies in the React ecosystem, coupled with modern tools like Tailwind CSS and TypeScript. I thrive in challenging environments and am always eager to learn and apply new technologies to solve real-world problems.",
-  skills: [
-    { name: "React", level: 90, icon: "react" },
-    { name: "JavaScript (ES6+)", level: 95, icon: "js" },
-    { name: "Tailwind CSS", level: 85, icon: "tailwind" },
-    { name: "Node.js", level: 75, icon: "node" },
-    { name: "TypeScript", level: 70, icon: "ts" },
-    { name: "Firebase/Firestore", level: 65, icon: "firebase" },
+  name: "Aditi Bhardwaj",
+  taglines: ["Data Scientist", "Health Informatics Expert", "ML Enthusiast", "Data-Driven Innovator"],
+  email: "bhardwajaditi20@outlook.com",
+  phone: "+1 (317) 982-4562",
+  kaggle: "https://kaggle.com/ad20iti",
+  github: "https://github.com/aditi-1996",
+  linkedin: "https://linkedin.com/in/bhardwajaditi/",
+  aboutMe: "Driven by a passion for leveraging data and machine learning to solve complex challenges in public health and healthcare. My expertise spans cohort analysis, time series modeling, multi-modal machine learning pipelines, and developing explainable AI solutions, primarily utilizing Python and the latest cloud technologies (AWS, GCP). I aim to translate complex data into actionable insights that drive significant clinical and economic impact.",
+  
+  // New Experience Data from Resume
+  experience: [
+    { 
+      title: "Data Scientist", 
+      company: "Massive Data Institute | Georgetown University", 
+      duration: "September 2023 - Present", 
+      location: "Washington D.C.",
+      bullets: [
+        "Performed cohort-based analysis of 2020-2023 clinical datasets on 10,000+ MedStar Health mother-infant dyads to estimate preterm birth reductions using Risk Stratification, Logistic Regression, and Generalized Linear Model, yielding 600+ avoided preterm cases and $30M+ in savings.",
+        "Quantified the ROI of MedStar Health's Safe Babies Safe Moms program by evaluating associated maternal and neonatal outcomes with risk-adjusted difference-in-differences analysis, validating findings through one-way sensitivity analyses to demonstrate cost-effectiveness of the program.",
+        "Created a state-level AI Readiness Index and an interactive dashboard on Google Cloud Platform (GCP) to visualize AI policy trends, utilizing Legiscan API with Python, Elasticsearch, and NLP techniques to classify state legislative documents and generate comparative insights on governance strategies across pilot states."
+      ]
+    },
+    { 
+      title: "Data Scientist", 
+      company: "Polis Center | Indiana University", 
+      duration: "June 2022 - May 2023", 
+      location: "Indianapolis, IN",
+      bullets: [
+        "Built R modules to compute community vulnerability scores and optimize public health resource allocation based on Social Assets and Vulnerability Indicators (SAVI), community data from American Community Survey (ACS), Indiana State Department of Health (ISDH), and the US Census Bureau Data.",
+        "Built a multivariate time series forecasting model and Tableau dashboards to monitor healthcare KPIs and detect anomalies in claim patterns, enabling policymakers to make data-driven decisions on resource allocation."
+      ]
+    },
+    { 
+      title: "Data Scientist", 
+      company: "School of Dentistry | Indiana University", 
+      duration: "August 2021 - May 2022", 
+      location: "Indianapolis, IN",
+      bullets: [
+        "Designed and implemented a multi-modal ML pipeline combining CNNs for dental radiographs with BERT-based NLP for EHR clinical notes, improving early disease detection accuracy by 80%.",
+        "Developed an ensemble ML model that leverages gradient boosting and SVM to identify social determinants of health (SDoH) affecting COVID-19, accurately predicting mortality rates with over 85% precision."
+      ]
+    }
   ],
+
   projects: [
     { 
-      title: "Task Manager Pro", 
-      description: "A full-stack task management application featuring real-time updates and user authentication. Built with React, TypeScript, and Firestore.", 
-      tech: ["React", "TypeScript", "Firestore", "Tailwind CSS"], 
+      title: "Perinatal Mood & Anxiety Disorder Outcome Modeling", 
+      description: "Developed a longitudinal dataset of 4,000+ maternal-infant dyads (2022-2025) and applied XGBoost, Random Forest, and GLM to distinguish pre-existing vs. pregnancy-related PMADs, quantify clinical/economic burden, and project long-term impacts.", 
+      tech: ["Python", "SQL", "XGBoost", "Random Forest", "GLM"], 
       link: "#" 
     },
     { 
-      title: "E-Commerce Mockup", 
-      description: "A responsive, modern e-commerce front end showcasing product filtering, cart functionality, and dynamic routing.", 
-      tech: ["Next.js", "Redux", "Tailwind CSS"], 
+      title: "Healthcare Claims & Patient Outcome Modeling", 
+      description: "Built ML and statistical models on claims and MIMIC-IV datasets to detect fraud, forecast ICU length of stay, and predict readmissions, reducing insurer losses and improving hospital resource planning. Implemented clustering and autoencoders in TensorFlow to identify anomalies and cost drivers.", 
+      tech: ["Python", "SQL", "TensorFlow", "MIMIC-IV"], 
       link: "#" 
     },
     { 
-      title: "Data Visualization Dashboard", 
-      description: "An interactive dashboard for complex datasets using D3.js integrated into a React framework.", 
-      tech: ["React", "D3.js", "Context API"], 
-      link: "#" 
+      title: "Explainable AI in Radiology Image Analysis Pipeline", 
+      description: "Developed a CNN-based chest X-ray classification model (DenseNet121) on the NIH-14 dataset using AWS SageMaker, applying SHAP for pixel-level explainability to enhance radiologist trust and interpretability.", 
+      tech: ["Python", "CNN", "AWS SageMaker", "SHAP"], 
+      link: "https://github.com/aditi-1996/chest_xray_classification" 
     },
   ]
 };
@@ -84,18 +114,6 @@ const useTypingEffect = (words, typingSpeed = 100, deletingSpeed = 50, delay = 1
   return text;
 };
 
-// Simple icon mapping for skills display (mimics the reference design)
-const SkillIcon = ({ iconName, className = 'w-6 h-6' }) => {
-    switch (iconName) {
-        case 'react': return <svg viewBox="0 0 100 100" className={`text-cyan-400 ${className}`}><path fill="currentColor" d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 13c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8V21c0-4.4-3.6-8-8-8H50zM21 42c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8V50c0-4.4-3.6-8-8-8H21zM65 42c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8V50c0-4.4-3.6-8-8-8H65z"/></svg>;
-        case 'js': return <Code className={`text-yellow-400 ${className}`} />;
-        case 'tailwind': return <svg viewBox="0 0 100 100" className={`text-sky-400 ${className}`}><path fill="currentColor" d="M85 30c-5.5 0-10 4.5-10 10v10c0 5.5 4.5 10 10 10s10-4.5 10-10V40c0-5.5-4.5-10-10-10zM50 15c-5.5 0-10 4.5-10 10v10c0 5.5 4.5 10 10 10s10-4.5 10-10V25c0-5.5-4.5-10-10-10zM15 30c-5.5 0-10 4.5-10 10v10c0 5.5 4.5 10 10 10s10-4.5 10-10V40c0-5.5-4.5-10-10-10zM50 45c-5.5 0-10 4.5-10 10v10c0 5.5 4.5 10 10 10s10-4.5 10-10V55c0-5.5-4.5-10-10-10zM85 60c-5.5 0-10 4.5-10 10v10c0 5.5 4.5 10 10 10s10-4.5 10-10V70c0-5.5-4.5-10-10-10zM15 60c-5.5 0-10 4.5-10 10v10c0 5.5 4.5 10 10 10s10-4.5 10-10V70c0-5.5-4.5-10-10-10z"/></svg>;
-        case 'node': return <svg viewBox="0 0 100 100" className={`text-green-500 ${className}`}><path fill="currentColor" d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 88c-21 0-38-17-38-38s17-38 38-38 38 17 38 38-17 38-38 38zM60 25L40 75h20l-5 15L75 25H60zM25 25h15l-5 15H25v-15zM75 75H60l-5 15h15V75z"/></svg>;
-        case 'ts': return <BookOpen className={`text-blue-500 ${className}`} />;
-        case 'firebase': return <Briefcase className={`text-orange-500 ${className}`} />;
-        default: return <Code className={`text-gray-400 ${className}`} />;
-    }
-};
 
 /**
  * Header Component - Fixed navigation bar
@@ -107,7 +125,8 @@ const Header = () => (
         {CONFIG.name.toUpperCase().split(' ')[0]}<span className="text-indigo-400">.DEV</span>
       </h1>
       <nav className="hidden md:flex space-x-8">
-        {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+        {/* Navigation updated: 'Skills' changed to 'Experience' */}
+        {['Home', 'About', 'Experience', 'Projects', 'Contact'].map((item) => (
           <a
             key={item}
             href={`#${item.toLowerCase()}`}
@@ -131,8 +150,6 @@ const Header = () => (
  * Hero Section - Includes the typing animation
  */
 const Hero = ({ typedText }) => {
-    const isMobile = window.innerWidth < 640;
-
     return (
         <section id="home" className="relative h-screen flex items-center justify-center pt-20 overflow-hidden">
             {/* Background Animation (Subtle Floating Dots) */}
@@ -220,10 +237,10 @@ const About = () => (
         <div className="sm:col-span-2">
             <p className="font-semibold text-white mb-2">Social Profiles:</p>
             <div className="flex space-x-4">
-                <a href={CONFIG.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full">
-                    <Github className="w-6 h-6" />
+                <a href={CONFIG.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Kaggle Profile">
+                    <GraduationCap className="w-6 h-6" /> {/* Using GraduationCap for the academic/data theme */}
                 </a>
-                <a href={CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full">
+                <a href={CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="LinkedIn Profile">
                     <Linkedin className="w-6 h-6" />
                 </a>
             </div>
@@ -235,26 +252,38 @@ const About = () => (
 
 
 /**
- * Skills Section
+ * Experience Section (Replaces Skills)
  */
-const Skills = () => (
+const Experience = () => (
   <section className="min-h-screen container mx-auto px-4 md:px-8">
-    <SectionTitle id="skills" icon={Code} title="Technical Skills" />
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      {CONFIG.skills.map((skill) => (
-        <div key={skill.name} className="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:scale-[1.02]">
-          <div className="flex items-center space-x-4 mb-3">
-            <SkillIcon iconName={skill.icon} className="w-8 h-8"/>
-            <h3 className="text-xl font-bold text-white">{skill.name}</h3>
+    {/* ID updated to 'experience' for navigation */}
+    <SectionTitle id="experience" icon={Briefcase} title="Work Experience" />
+    <div className="max-w-4xl mx-auto space-y-12">
+      {CONFIG.experience.map((job, index) => (
+        <div 
+          key={index} 
+          className="relative pl-8 md:pl-16 group transition duration-500"
+        >
+          {/* Vertical Line */}
+          <div className="absolute left-0 md:left-4 top-0 h-full w-0.5 bg-gray-700 group-hover:bg-indigo-500 transition duration-500"></div>
+          
+          {/* Icon Circle */}
+          <div className="absolute -left-2 md:left-2.5 top-2 w-6 h-6 rounded-full bg-indigo-600 flex items-center justify-center border-4 border-gray-900 group-hover:scale-110 transition duration-300">
+            <Briefcase className="w-3 h-3 text-white" />
           </div>
-          <div className="w-full bg-gray-700 rounded-full h-2.5">
-            <div 
-              className="bg-indigo-500 h-2.5 rounded-full" 
-              style={{ width: `${skill.level}%` }}
-              aria-label={`Skill level: ${skill.level}%`}
-            ></div>
+
+          {/* Job Card */}
+          <div className="bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-500 transform group-hover:-translate-y-1">
+            <p className="text-sm font-semibold text-indigo-400 uppercase tracking-widest mb-1">{job.duration}</p>
+            <h3 className="text-2xl font-bold text-white mb-1">{job.title}</h3>
+            <p className="text-lg text-gray-300 font-medium mb-4">{job.company} - <span className="text-gray-500 font-normal italic">{job.location}</span></p>
+            
+            <ul className="list-disc pl-5 space-y-2 text-gray-400">
+              {job.bullets.map((bullet, i) => (
+                <li key={i} className="text-base leading-relaxed">{bullet}</li>
+              ))}
+            </ul>
           </div>
-          <p className="text-sm text-gray-400 mt-2">{skill.level}% Proficiency</p>
         </div>
       ))}
     </div>
@@ -274,12 +303,14 @@ const ProjectCard = ({ project }) => (
             <span key={t} className="text-xs font-medium bg-gray-700 text-indigo-300 px-3 py-1 rounded-full">{t}</span>
           ))}
         </div>
-        <a 
-          href={project.link} 
-          className="flex items-center text-indigo-400 font-semibold hover:text-indigo-300 transition duration-300"
-        >
-          View Demo (Mock Link) <ArrowRight className="w-4 h-4 ml-2" />
-        </a>
+        {project.link && (
+          <a 
+            href={project.link} 
+            className="flex items-center text-indigo-400 font-semibold hover:text-indigo-300 transition duration-300"
+          >
+          Link <ArrowRight className="w-4 h-4 ml-2" />
+          </a>
+        )}
       </div>
     </div>
 );
@@ -290,7 +321,7 @@ const ProjectCard = ({ project }) => (
  */
 const Projects = () => (
   <section className="min-h-screen container mx-auto px-4 md:px-8">
-    <SectionTitle id="projects" icon={Briefcase} title="Featured Projects" />
+    <SectionTitle id="projects" icon={Code} title="Featured Projects" />
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
       {CONFIG.projects.map((project, index) => (
         <ProjectCard key={index} project={project} />
@@ -317,19 +348,14 @@ const Contact = () => (
                     <p className="text-white font-medium">Email</p>
                     <a href={`mailto:${CONFIG.email}`} className="text-gray-400 hover:text-indigo-400 transition">{CONFIG.email}</a>
                 </div>
-                <div className="text-center">
-                    <MessageSquare className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
-                    <p className="text-white font-medium">LinkedIn</p>
-                    <a href={CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition">Message Me</a>
-                </div>
+                {/* <div className="text-center">
+                    <Phone className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
+                    <p className="text-white font-medium">Phone</p>
+                    <a href={`tel:${CONFIG.phone}`} className="text-gray-400 hover:text-indigo-400 transition">{CONFIG.phone}</a>
+                </div> */}
             </div>
 
             {/* Note on Form Functionality */}
-            <div className="text-center p-4 bg-gray-700/50 border-l-4 border-yellow-500 rounded-lg">
-                <p className="text-sm text-yellow-300">
-                    <span className="font-bold">Note:</span> The contact form is a placeholder in this demo. For a live site, you would connect this form to a backend service like Firebase, Netlify Forms, or a serverless function.
-                </p>
-            </div>
         </div>
     </section>
 );
@@ -353,12 +379,12 @@ const App = () => {
       <main>
         <Hero typedText={typedText} />
         <About />
-        <Skills />
+        {/* Replaced Skills with Experience */}
+        <Experience />
         <Projects />
         <Contact />
       </main>
       <footer className="py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <p>Built with React & Tailwind CSS | Designed to mimic the structure of aryapriyank.vercel.app</p>
         <p>&copy; {new Date().getFullYear()} {CONFIG.name}</p>
       </footer>
     </div>
