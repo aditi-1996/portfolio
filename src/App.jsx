@@ -237,25 +237,62 @@ const About = () => (
         <div className="sm:col-span-2">
             <p className="font-semibold text-white mb-2">Social Profiles:</p>
             <div className="flex space-x-4">
-
+              
+              {/* Tooltip component structure */}
               {/* 1. Kaggle Profile */}
-              <a href={CONFIG.kaggle} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Kaggle Profile">
+              <a 
+                  href={CONFIG.kaggle} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="relative group text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" 
+                  aria-label="Kaggle Profile"
+              >
                   <GraduationCap className="w-6 h-6" />
+                  <span className="absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-700 border border-indigo-500 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+                      Kaggle Profile
+                  </span>
               </a>
               
               {/* 2. GitHub Profile */}
-              <a href={CONFIG.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="GitHub Profile">
+              <a 
+                  href={CONFIG.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="relative group text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" 
+                  aria-label="GitHub Profile"
+              >
                   <Github className="w-6 h-6" />
+                   <span className="absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-700 border border-indigo-500 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+                      GitHub Profile
+                  </span>
               </a>
               
               {/* 3. LinkedIn Profile */}
-              <a href={CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="LinkedIn Profile">
+              <a 
+                  href={CONFIG.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="relative group text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" 
+                  aria-label="LinkedIn Profile"
+              >
                   <Linkedin className="w-6 h-6" />
+                  <span className="absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-700 border border-indigo-500 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+                      LinkedIn Profile
+                  </span>
               </a>
 
               {/* 4. Resume Link */}
-              <a href={CONFIG.resume} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Resume Document">
+              <a 
+                  href={CONFIG.resume} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="relative group text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" 
+                  aria-label="View Resume"
+              >
                   <BookOpen className="w-6 h-6" />
+                  <span className="absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-700 border border-indigo-500 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+                      View Resume
+                  </span>
               </a>
             </div>
         </div>
