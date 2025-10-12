@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Briefcase, Code, Mail, User, BookOpen, ArrowRight, Github, Linkedin, MessageSquare, GraduationCap } from 'lucide-react';
+import { Briefcase, Code, Mail, User, Phone, ArrowRight, Github, Linkedin, BookOpen, GraduationCap } from 'lucide-react';
 
 // --- Configuration Data ---
 const CONFIG = {
@@ -10,6 +10,7 @@ const CONFIG = {
   kaggle: "https://kaggle.com/ad20iti",
   github: "https://github.com/aditi-1996",
   linkedin: "https://linkedin.com/in/bhardwajaditi/",
+  resume: "https://drive.google.com/file/d/1zkFlJDd_oAuDoPToEOXTQhiz1Oi6_qCX/view?usp=sharing", 
   aboutMe: "Driven by a passion for leveraging data and machine learning to solve complex challenges in public health and healthcare. My expertise spans cohort analysis, time series modeling, multi-modal machine learning pipelines, and developing explainable AI solutions, primarily utilizing Python and the latest cloud technologies (AWS, GCP). I aim to translate complex data into actionable insights that drive significant clinical and economic impact.",
   
   // New Experience Data from Resume
@@ -237,9 +238,23 @@ const About = () => (
         <div className="sm:col-span-2">
             <p className="font-semibold text-white mb-2">Social Profiles:</p>
             <div className="flex space-x-4">
-                <a href={CONFIG.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Kaggle Profile">
-                    <GraduationCap className="w-6 h-6" /> {/* Using GraduationCap for the academic/data theme */}
+                
+                {/* 1. GitHub Profile */}
+                <a href={CONFIG.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="GitHub Profile">
+                    <Github className="w-6 h-6" />
                 </a>
+
+                {/* 2. Resume Link */}
+                <a href={CONFIG.resume} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Resume Document">
+                    <BookOpen className="w-6 h-6" />
+                </a>
+
+                {/* 3. Kaggle Profile */}
+                <a href={CONFIG.kaggle} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Kaggle Profile">
+                    <GraduationCap className="w-6 h-6" />
+                </a>
+                
+                {/* 4. LinkedIn Profile */}
                 <a href={CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="LinkedIn Profile">
                     <Linkedin className="w-6 h-6" />
                 </a>
@@ -306,6 +321,8 @@ const ProjectCard = ({ project }) => (
         {project.link && (
           <a 
             href={project.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="flex items-center text-indigo-400 font-semibold hover:text-indigo-300 transition duration-300"
           >
           Link <ArrowRight className="w-4 h-4 ml-2" />
@@ -348,11 +365,11 @@ const Contact = () => (
                     <p className="text-white font-medium">Email</p>
                     <a href={`mailto:${CONFIG.email}`} className="text-gray-400 hover:text-indigo-400 transition">{CONFIG.email}</a>
                 </div>
-                {/* <div className="text-center">
+                <div className="text-center">
                     <Phone className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
                     <p className="text-white font-medium">Phone</p>
                     <a href={`tel:${CONFIG.phone}`} className="text-gray-400 hover:text-indigo-400 transition">{CONFIG.phone}</a>
-                </div> */}
+                </div>
             </div>
 
             {/* Note on Form Functionality */}
