@@ -53,13 +53,13 @@ const CONFIG = {
       title: "Perinatal Mood & Anxiety Disorder Outcome Modeling", 
       description: "Developed a longitudinal dataset of 4,000+ maternal-infant dyads (2022-2025) and applied XGBoost, Random Forest, and GLM to distinguish pre-existing vs. pregnancy-related PMADs, quantify clinical/economic burden, and project long-term impacts.", 
       tech: ["Python", "SQL", "XGBoost", "Random Forest", "GLM"], 
-      link: "#" 
+      link: "" 
     },
     { 
       title: "Healthcare Claims & Patient Outcome Modeling", 
       description: "Built ML and statistical models on claims and MIMIC-IV datasets to detect fraud, forecast ICU length of stay, and predict readmissions, reducing insurer losses and improving hospital resource planning. Implemented clustering and autoencoders in TensorFlow to identify anomalies and cost drivers.", 
       tech: ["Python", "SQL", "TensorFlow", "MIMIC-IV"], 
-      link: "#" 
+      link: "" 
     },
     { 
       title: "Explainable AI in Radiology Image Analysis Pipeline", 
@@ -126,7 +126,6 @@ const Header = () => (
         {CONFIG.name.toUpperCase().split(' ')[0]}<span className="text-indigo-400">.DEV</span>
       </h1>
       <nav className="hidden md:flex space-x-8">
-        {/* Navigation updated: 'Skills' changed to 'Experience' */}
         {['Home', 'About', 'Experience', 'Projects', 'Contact'].map((item) => (
           <a
             key={item}
@@ -238,26 +237,26 @@ const About = () => (
         <div className="sm:col-span-2">
             <p className="font-semibold text-white mb-2">Social Profiles:</p>
             <div className="flex space-x-4">
-                
-                {/* 1. GitHub Profile */}
-                <a href={CONFIG.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="GitHub Profile">
-                    <Github className="w-6 h-6" />
-                </a>
 
-                {/* 2. Resume Link */}
-                <a href={CONFIG.resume} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Resume Document">
-                    <BookOpen className="w-6 h-6" />
-                </a>
+              {/* 1. Kaggle Profile */}
+              <a href={CONFIG.kaggle} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Kaggle Profile">
+                  <GraduationCap className="w-6 h-6" />
+              </a>
+              
+              {/* 2. GitHub Profile */}
+              <a href={CONFIG.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="GitHub Profile">
+                  <Github className="w-6 h-6" />
+              </a>
+              
+              {/* 3. LinkedIn Profile */}
+              <a href={CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="LinkedIn Profile">
+                  <Linkedin className="w-6 h-6" />
+              </a>
 
-                {/* 3. Kaggle Profile */}
-                <a href={CONFIG.kaggle} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Kaggle Profile">
-                    <GraduationCap className="w-6 h-6" />
-                </a>
-                
-                {/* 4. LinkedIn Profile */}
-                <a href={CONFIG.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="LinkedIn Profile">
-                    <Linkedin className="w-6 h-6" />
-                </a>
+              {/* 4. Resume Link */}
+              <a href={CONFIG.resume} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" aria-label="Resume Document">
+                  <BookOpen className="w-6 h-6" />
+              </a>
             </div>
         </div>
       </div>
@@ -358,18 +357,27 @@ const Contact = () => (
                 I'm currently available for new opportunities and collaborations. Feel free to reach out!
             </p>
             
-            {/* Contact Information */}
-            <div className="flex justify-center space-x-10 mb-10">
-                <div className="text-center">
-                    <Mail className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
-                    <p className="text-white font-medium">Email</p>
-                    <a href={`mailto:${CONFIG.email}`} className="text-gray-400 hover:text-indigo-400 transition">{CONFIG.email}</a>
-                </div>
-                <div className="text-center">
-                    <Phone className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
-                    <p className="text-white font-medium">Phone</p>
-                    <a href={`tel:${CONFIG.phone}`} className="text-gray-400 hover:text-indigo-400 transition">{CONFIG.phone}</a>
-                </div>
+            {/* Contact Information*/}
+            <div className="flex flex-col sm:flex-row justify-center items-stretch gap-8 mb-10">
+              {/* Phone Link */}
+                <a 
+                    href={`tel:${CONFIG.phone}`} 
+                    className="flex-1 block text-center p-6 rounded-xl border border-gray-700 hover:border-indigo-500 hover:bg-gray-700/30 transition duration-300 group cursor-pointer"
+                >
+                    <Phone className="w-8 h-8 text-indigo-400 mx-auto mb-2 group-hover:scale-105 transition" />
+                    <p className="text-white font-medium mb-1">Phone</p>
+                    <p className="text-gray-400 text-sm">{CONFIG.phone}</p>
+                </a>
+                
+                {/* Email Link */}
+                <a 
+                    href={`mailto:${CONFIG.email}`} 
+                    className="flex-1 block text-center p-6 rounded-xl border border-gray-700 hover:border-indigo-500 hover:bg-gray-700/30 transition duration-300 group cursor-pointer"
+                >
+                    <Mail className="w-8 h-8 text-indigo-400 mx-auto mb-2 group-hover:scale-105 transition" />
+                    <p className="text-white font-medium mb-1">Email</p>
+                    <p className="text-gray-400 text-sm">{CONFIG.email}</p>
+                </a>
             </div>
 
             {/* Note on Form Functionality */}
