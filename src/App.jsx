@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Briefcase, Code, Mail, User, Phone, ArrowRight, Github, Linkedin, BookOpen, GraduationCap } from 'lucide-react';
+import { Briefcase, Code, Mail, User, Phone, ArrowRight, Github, Linkedin, BookOpen } from 'lucide-react';
+import { SiKaggle } from 'react-icons/si';
 
 // --- Configuration Data ---
 const CONFIG = {
@@ -11,7 +12,7 @@ const CONFIG = {
   github: "https://github.com/aditi-1996",
   linkedin: "https://linkedin.com/in/bhardwajaditi/",
   resume: "https://drive.google.com/file/d/1zkFlJDd_oAuDoPToEOXTQhiz1Oi6_qCX/view?usp=sharing", 
-  aboutMe: "Driven by a passion for leveraging data and machine learning to solve complex challenges in public health and healthcare. My expertise spans cohort analysis, time series modeling, multi-modal machine learning pipelines, and developing explainable AI solutions, primarily utilizing Python and the latest cloud technologies (AWS, GCP). I aim to translate complex data into actionable insights that drive significant clinical and economic impact.",
+  aboutMe: "Data Scientist with 4+ years of experience in machine learning and healthcare analytics, specializing in modeling complex clinical and claims datasets to extract actionable intelligence. I build explainable, production-ready models leveraging statistical inference, predictive modeling, and cloud-scale data pipelines to optimize health outcomes and operational efficiency.",
   
   // New Experience Data from Resume
   experience: [
@@ -149,27 +150,33 @@ const Header = () => (
 /**
  * Hero Section - Includes the typing animation
  */
+import './Hero.css';
+
 const Hero = ({ typedText }) => {
     return (
         <section id="home" className="relative h-screen flex items-center justify-center pt-20 overflow-hidden">
-            {/* Background Animation (Subtle Floating Dots) */}
-            <div className="absolute inset-0 bg-gray-900 z-0">
-                <div className="dots-background">
-                    {[...Array(50)].map((_, i) => (
+            <div className="dots-background">
+                {[...Array(50)].map((_, i) => {
+                    const randX = Math.random() > 0.5 ? 1 : -1;
+                    const randY = Math.random() > 0.5 ? 1 : -1;
+                    return (
                         <div 
                             key={i} 
-                            className="absolute bg-indigo-500 rounded-full opacity-10 blur-sm" 
+                            className="dot" 
                             style={{
                                 width: `${Math.random() * 4 + 2}px`, 
                                 height: `${Math.random() * 4 + 2}px`, 
                                 top: `${Math.random() * 100}vh`, 
                                 left: `${Math.random() * 100}vw`,
-                                animation: `float ${Math.random() * 20 + 10}s infinite alternate ease-in-out`,
+                                animationDuration: `${Math.random() * 20 + 10}s`,
+                                '--rand-x': `${randX * 50}px`,
+                                '--rand-y': `${randY * 50}px`,
                             }}
                         />
-                    ))}
-                </div>
+                    )
+                })}
             </div>
+
 
             <div className="relative z-10 text-center px-4">
                 <p className="text-xl sm:text-2xl text-gray-300 mb-2 font-light">Hello, I'm</p>
@@ -187,17 +194,7 @@ const Hero = ({ typedText }) => {
                 </div>
             </div>
 
-            {/* Custom CSS for the subtle background animation */}
-            <style jsx="true">{`
-                @keyframes float {
-                    0% { transform: translate(0, 0); }
-                    100% { transform: translate(calc(var(--rand-x, 1) * 50px), calc(var(--rand-y, 1) * 50px)); }
-                }
-                .dots-background > div {
-                    --rand-x: ${Math.random() > 0.5 ? 1 : -1};
-                    --rand-y: ${Math.random() > 0.5 ? 1 : -1};
-                }
-            `}</style>
+
         </section>
     );
 };
@@ -247,7 +244,7 @@ const About = () => (
                   className="relative group text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" 
                   aria-label="Kaggle Profile"
               >
-                  <GraduationCap className="w-6 h-6" />
+                  <SiKaggle className="w-6 h-6" />
                   <span className="absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-700 border border-indigo-500 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
                       Kaggle Profile
                   </span>
