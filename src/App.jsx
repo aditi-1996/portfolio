@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Briefcase, Code, Mail, User, Phone, ArrowRight, Github, Linkedin, BookOpen } from 'lucide-react';
-import { AiFillKaggleSquare } from 'react-icons/ai';
+import { FaKaggle } from 'react-icons/fa6';
 
 // --- Configuration Data ---
 const CONFIG = {
@@ -12,7 +12,7 @@ const CONFIG = {
   github: "https://github.com/aditi-1996",
   linkedin: "https://linkedin.com/in/bhardwajaditi/",
   resume: "https://drive.google.com/file/d/1zkFlJDd_oAuDoPToEOXTQhiz1Oi6_qCX/view?usp=sharing", 
-  aboutMe: "Data Scientist with 4+ years of experience in machine learning and healthcare analytics, specializing in modeling complex clinical and claims datasets to extract actionable intelligence. I build explainable, production-ready models leveraging statistical inference, predictive modeling, and cloud-scale data pipelines to optimize health outcomes and operational efficiency.",
+  aboutMe: "Driven by a passion for leveraging data and machine learning to solve complex challenges in public health and healthcare. My expertise spans cohort analysis, time series modeling, multi-modal machine learning pipelines, and developing explainable AI solutions, primarily utilizing Python and the latest cloud technologies (AWS, GCP). I aim to translate complex data into actionable insights that drive significant clinical and economic impact.",
   
   // New Experience Data from Resume
   experience: [
@@ -210,7 +210,7 @@ const Hero = ({ typedText }) => {
 const SectionTitle = ({ id, icon: Icon, title }) => (
     <div id={id} className="pt-24 mb-12 text-center">
         <Icon className="w-10 h-10 mx-auto text-indigo-400 mb-2" />
-        <h2 className="4xl font-extrabold text-white mb-2">{title}</h2>
+        <h2 className="text-4xl font-extrabold text-white mb-2">{title}</h2>
         <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full"></div>
     </div>
 );
@@ -240,7 +240,7 @@ const About = () => (
             <div className="flex space-x-4">
               
               {/* Tooltip component structure */}
-              {/* 1. Kaggle Profile - NOW USING AiFillKaggleSquare */}
+              {/* 1. Kaggle Profile */}
               <a 
                   href={CONFIG.kaggle} 
                   target="_blank" 
@@ -248,7 +248,7 @@ const About = () => (
                   className="relative group text-gray-300 hover:text-white transition duration-300 p-2 bg-gray-700 rounded-full" 
                   aria-label="Kaggle Profile"
               >
-                  <AiFillKaggleSquare className="w-6 h-6" />
+                  <FaKaggle className="w-6 h-6" />
                   <span className="absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-700 border border-indigo-500 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
                       Kaggle Profile
                   </span>
