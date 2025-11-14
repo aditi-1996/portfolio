@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Briefcase, Code, Mail, User, Phone, ArrowRight, Github, Linkedin, BookOpen, Sun, Moon } from 'lucide-react';
-import { FaKaggle } from 'react-icons/fa6';
+import { Briefcase, Code, Mail, User, Phone, ArrowRight, Github, Linkedin, File, Sun, Moon } from 'lucide-react';
+import { FaKaggle, FaMedium } from 'react-icons/fa6';
 
 // --- Configuration Data ---
 const CONFIG = {
@@ -8,9 +8,10 @@ const CONFIG = {
   taglines: ["Data Scientist", "Health Informatics Expert", "ML Enthusiast", "Data-Driven Innovator"],
   email: "bhardwajaditi20@outlook.com",
   phone: "+1 (317) 982-4562",
-  kaggle: "https://kaggle.com/ad20iti",
-  github: "https://github.com/aditi-1996",
   linkedin: "https://linkedin.com/in/bhardwajaditi/",
+  medium: "https://medium.com/@bhardwajaditi203",
+  github: "https://github.com/aditi-1996",
+  kaggle: "https://kaggle.com/ad20iti",
   resume: "https://drive.google.com/file/d/1zkFlJDd_oAuDoPToEOXTQhiz1Oi6_qCX/view?usp=sharing", 
   aboutMe: "Driven by a passion for leveraging data and machine learning to solve complex challenges in public health and healthcare. My expertise spans cohort analysis, time series modeling, multi-modal machine learning pipelines, and developing explainable AI solutions, primarily utilizing Python and the latest cloud technologies (AWS, GCP). I aim to translate complex data into actionable insights that drive significant clinical and economic impact.",
   
@@ -302,62 +303,76 @@ const About = ({ theme }) => {
                     <div className="sm:col-span-2">
                         <p className={`font-semibold ${primaryTextClass} mb-2`}>Social Profiles:</p>
                         <div className="flex space-x-4">
-                            
-                            {/* 1. Kaggle Profile */}
-                            <a 
-                                href={CONFIG.kaggle} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className={`relative group ${tertiaryTextClass} hover:${primaryTextClass} transition duration-300 p-2 ${cardBgClass} rounded-full border ${borderClass}`} 
-                                aria-label="Kaggle Profile"
-                            >
-                                <FaKaggle className="w-6 h-6" />
-                                <span className={`absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap ${cardBgClass} border border-indigo-500 ${primaryTextClass} text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20`}>
-                                    Kaggle Profile
-                                </span>
-                            </a>
-                            
-                            {/* 2. GitHub Profile */}
-                            <a 
-                                href={CONFIG.github} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className={`relative group ${tertiaryTextClass} hover:${primaryTextClass} transition duration-300 p-2 ${cardBgClass} rounded-full border ${borderClass}`} 
-                                aria-label="GitHub Profile"
-                            >
-                                <Github className="w-6 h-6" />
-                                <span className={`absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap ${cardBgClass} border border-indigo-500 ${primaryTextClass} text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20`}>
-                                    GitHub Profile
-                                </span>
-                            </a>
-                            
-                            {/* 3. LinkedIn Profile */}
-                            <a 
-                                href={CONFIG.linkedin} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className={`relative group ${tertiaryTextClass} hover:${primaryTextClass} transition duration-300 p-2 ${cardBgClass} rounded-full border ${borderClass}`} 
-                                aria-label="LinkedIn Profile"
-                            >
-                                <Linkedin className="w-6 h-6" />
-                                <span className={`absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap ${cardBgClass} border border-indigo-500 ${primaryTextClass} text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20`}>
-                                    LinkedIn Profile
-                                </span>
-                            </a>
 
-                            {/* 4. Resume Link */}
-                            <a 
-                                href={CONFIG.resume} 
+                          {/* 1. LinkedIn Profile */}
+                          <a 
+                              href={CONFIG.linkedin} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className={`relative group ${tertiaryTextClass} hover:${primaryTextClass} transition duration-300 p-2 ${cardBgClass} rounded-full border ${borderClass}`} 
+                              aria-label="LinkedIn Profile"
+                          >
+                              <Linkedin className="w-6 h-6" />
+                              <span className={`absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap ${cardBgClass} border border-indigo-500 ${primaryTextClass} text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20`}>
+                                  LinkedIn Profile
+                              </span>
+                          </a>
+
+                          {/* 2. Medium Profile */}
+                          <a 
+                                href={CONFIG.medium} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className={`relative group ${tertiaryTextClass} hover:${primaryTextClass} transition duration-300 p-2 ${cardBgClass} rounded-full border ${borderClass}`} 
-                                aria-label="View Resume"
+                                aria-label="Medium Profile"
                             >
-                                <BookOpen className="w-6 h-6" />
+                                <FaMedium className="w-6 h-6" />
                                 <span className={`absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap ${cardBgClass} border border-indigo-500 ${primaryTextClass} text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20`}>
-                                    View Resume
+                                    Medium Profile
                                 </span>
                             </a>
+                            
+                          {/* 3. GitHub Profile */}
+                          <a 
+                              href={CONFIG.github} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className={`relative group ${tertiaryTextClass} hover:${primaryTextClass} transition duration-300 p-2 ${cardBgClass} rounded-full border ${borderClass}`} 
+                              aria-label="GitHub Profile"
+                          >
+                              <Github className="w-6 h-6" />
+                              <span className={`absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap ${cardBgClass} border border-indigo-500 ${primaryTextClass} text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20`}>
+                                  GitHub Profile
+                              </span>
+                          </a>
+                            
+                          {/* 4. Kaggle Profile */}
+                          <a 
+                              href={CONFIG.kaggle} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className={`relative group ${tertiaryTextClass} hover:${primaryTextClass} transition duration-300 p-2 ${cardBgClass} rounded-full border ${borderClass}`} 
+                              aria-label="Kaggle Profile"
+                          >
+                              <FaKaggle className="w-6 h-6" />
+                              <span className={`absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap ${cardBgClass} border border-indigo-500 ${primaryTextClass} text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20`}>
+                                  Kaggle Profile
+                              </span>
+                          </a>
+
+                          {/* 5. Resume Link */}
+                          <a 
+                              href={CONFIG.resume} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className={`relative group ${tertiaryTextClass} hover:${primaryTextClass} transition duration-300 p-2 ${cardBgClass} rounded-full border ${borderClass}`} 
+                              aria-label="View Resume"
+                          >
+                              <File className="w-6 h-6" />
+                              <span className={`absolute hidden group-hover:block -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap ${cardBgClass} border border-indigo-500 ${primaryTextClass} text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20`}>
+                                  View Resume
+                              </span>
+                          </a>
                         </div>
                     </div>
                 </div>
