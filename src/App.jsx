@@ -68,6 +68,24 @@ const CONFIG = {
       tech: ["Python", "CNN", "AWS SageMaker", "SHAP"], 
       link: "https://github.com/aditi-1996/chest_xray_classification" 
     },
+    { 
+      title: "Automated Weather ETL Pipeline Using Apache Airflow", 
+      description: "Created an ETL pipeline using Apache Airflow and Python to automate the extraction, transformation, and loading of location-based weather data into PostgreSQL, containerizing the entire workflow with Docker.", 
+      tech: ["Python", "SQL", "PostgreSQL", "Airflow", "Docker"], 
+      link: "https://github.com/aditi-1996/airflow-weather-etl"
+    },
+    {
+      title: "Real-Time Log Streaming and Monitoring",
+      description: "Built an end-to-end log processing pipeline using Kafka, Filebeat, Elasticsearch, Logstash, and Kibana for real-time ingestion, transformation, and visualization of application logs for improved observability.",
+      tech: ["Python", "ELK stack"],
+      link: "https://github.com/aditi-1996/elk-kafka-project"
+    },
+    { 
+      title: "Transaction Fraud Detection Model",
+      description: "Built an end-to-end fraud-detection pipeline on card transactions data, performing feature engineering, class-imbalance handling, and model benchmarking achieving 94% accuracy in flagging fraudulent transactions.",
+      tech: ["Python", "Scikit-Learn", "Logistic Regression", "XGBoost"],
+      link: ""
+    }   
   ]
 };
 
