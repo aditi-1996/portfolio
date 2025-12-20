@@ -12,7 +12,7 @@ const CONFIG = {
   medium: "https://medium.com/@bhardwajaditi203",
   github: "https://github.com/aditi-1996",
   kaggle: "https://kaggle.com/ad20iti",
-  resume: "https://drive.google.com/file/d/1zkFlJDd_oAuDoPToEOXTQhiz1Oi6_qCX/view?usp=sharing", 
+  resume: "https://1drv.ms/b/c/5BABD618E7636DFB/IQC5i8uXPi2FRIxtnFv8JPuZAcwnN8XzJDSe8wybmeLQ9aw?e=AIjak5", 
   aboutMe: "Driven by a passion for leveraging data and machine learning to solve complex challenges in public health and healthcare. My expertise spans cohort analysis, time series modeling, multi-modal machine learning pipelines, and developing explainable AI solutions, primarily utilizing Python and the latest cloud technologies (AWS, GCP). I aim to translate complex data into actionable insights that drive significant clinical and economic impact.",
   
   experience: [
