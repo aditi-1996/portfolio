@@ -66,7 +66,7 @@ const CONFIG = {
       title: "Explainable AI in Radiology Image Analysis Pipeline", 
       description: "Developed a CNN-based chest X-ray classification model (DenseNet121) on the NIH-14 dataset using AWS SageMaker, applying SHAP for pixel-level explainability to enhance radiologist trust and interpretability.", 
       tech: ["Python", "CNN", "AWS SageMaker", "SHAP"], 
-      link: "https://github.com/aditi-1996/chest_xray_classification" 
+      link: "https://github.com/aditi-1996/chest_xray_classification"
     },
   ]
 };
