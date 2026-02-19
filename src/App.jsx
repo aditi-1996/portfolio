@@ -50,7 +50,13 @@ const CONFIG = {
   ],
 
   projects: [
-    { 
+    {
+      title: "StateIQ: A National AI Readiness Index",
+      description: "A data pipeline and interactive dashboard that measures U.S. state-level AI readiness by scraping, indexing, and analyzing thousands of legislative bills and executive orders across 8 policy dimensions — infrastructure, environment, data, privacy & security, perception, education & workforce, accessibility, and equity & diversity.",
+      tech: ["Python", "Legiscan API", "NLP", "Google Cloud Storage", "Elasticsearch", "Pandas", "Git"],
+      link: ""
+    },
+    {
       title: "Perinatal Mood & Anxiety Disorder Outcome Modeling", 
       description: "Developed a longitudinal dataset of 4,000+ maternal-infant dyads (2022-2025) and applied XGBoost, Random Forest, and GLM to distinguish pre-existing vs. pregnancy-related PMADs, quantify clinical/economic burden, and project long-term impacts.", 
       tech: ["Python", "SQL", "XGBoost", "Random Forest", "GLM"], 
