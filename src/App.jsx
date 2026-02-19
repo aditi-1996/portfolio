@@ -57,6 +57,12 @@ const CONFIG = {
       link: ""
     },
     {
+      title: "Spending to Outcomes: A National School and District Finance Explorer",
+      description: "An interactive data platform that maps per-pupil expenditures against student academic outcomes at the school and district level across U.S. states, enabling policymakers and education leaders to identify which schools and districts are maximizing their resource investments.",
+      tech: ["R", "R Shiny", "Tableau", "ggplot2", "Pearson Correlation", "OLS Regression", "dplyr", "tidyr", "Git"],
+      link: ""
+    },
+    {
       title: "Perinatal Mood & Anxiety Disorder Outcome Modeling", 
       description: "Developed a longitudinal dataset of 4,000+ maternal-infant dyads (2022-2025) and applied XGBoost, Random Forest, and GLM to distinguish pre-existing vs. pregnancy-related PMADs, quantify clinical/economic burden, and project long-term impacts.", 
       tech: ["Python", "SQL", "XGBoost", "Random Forest", "GLM"], 
