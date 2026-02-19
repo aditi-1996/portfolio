@@ -59,7 +59,7 @@ const CONFIG = {
     {
       title: "Spending to Outcomes: A National School and District Finance Explorer",
       description: "An interactive data platform that maps per-pupil expenditures against student academic outcomes at the school and district level across U.S. states, enabling policymakers and education leaders to identify which schools and districts are maximizing their resource investments.",
-      tech: ["R", "R Shiny", "Tableau", "ggplot2", "Pearson Correlation", "OLS Regression", "dplyr", "tidyr", "Git"],
+      tech: ["R", "R Shiny (prototyping & statistical modeling)", "Tableau (production dashboard)", "ggplot2", "dplyr", "tidyr", "Git"],
       link: ""
     },
     {
