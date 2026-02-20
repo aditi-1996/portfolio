@@ -58,8 +58,8 @@ const CONFIG = {
     },
     {
       title: "Spending to Outcomes: A National School and District Finance Explorer",
-      description: "An interactive data platform that maps per-pupil expenditures against student academic outcomes at the school and district level across U.S. states, enabling policymakers and education leaders to identify which schools and districts are maximizing their resource investments.",
-      tech: ["R", "R Shiny (prototyping & statistical modeling)", "Tableau (production dashboard)", "ggplot2", "dplyr", "tidyr", "Git"],
+      description: "An end-to-end data platform that scrapes school-level and district-level financial and academic data from ESSA Report Card portals — using Requests to query hidden API endpoints and Playwright for dynamic page automation — then maps per-pupil expenditures against student academic outcomes at the school and district level across U.S. states, enabling policymakers and education leaders to identify which schools and districts are maximizing their resource investments.",
+      tech: ["Python", "Playwright", "asyncio", "Requests", "openpyxl", "R", "R Shiny (prototyping & statistical modeling)", "Tableau (production dashboard)", "ggplot2", "dplyr", "tidyr", "Git"],
       link: ""
     },
     {
