@@ -51,6 +51,12 @@ const CONFIG = {
 
   projects: [
     {
+      title: "SpatioTemporal Demand Forecasting & Experimental Optimization for Urban Mobility",
+      description: "Built a spatiotemporal demand forecasting and experimentation framework using Citi Bike data. Developed Prophet, SARIMA, and XGBoost models to predict hourly demand, applied clustering and anomaly detection, and designed Bayesian and frequentist A/B experiments to evaluate ML-optimized rebalancing strategies.",
+      tech: ["Python", "Pandas", "Scikit-learn", "XGBoost", "Prophet", "PyMC", "Folium", "Plotly", "Time Series Forecasting", "A/B Testing", "Geospatial Analysis"],
+      link: ""
+    },
+    {
       title: "StateIQ: A National AI Readiness Index",
       description: "A data pipeline and interactive dashboard that measures U.S. state-level AI readiness by scraping, indexing, and analyzing thousands of legislative bills and executive orders across 8 policy dimensions — infrastructure, environment, data, privacy & security, perception, education & workforce, accessibility, and equity & diversity.",
       tech: ["Python", "Legiscan API", "NLP", "Google Cloud Storage", "Elasticsearch", "Pandas", "Git"],
