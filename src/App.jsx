@@ -51,6 +51,12 @@ const CONFIG = {
 
   projects: [
     {
+      title: "Causal Impact of Medicaid Expansion on Health Outcomes: A Staggered Difference-in-Differences Analysis",
+      description: "Leveraged the staggered adoption of ACA Medicaid expansion across U.S. states to estimate its causal impact on mortality, diabetes management, and maternal health. Implemented modern DiD estimators (Callaway & Sant'Anna, Sun & Abraham), event study designs, synthetic control methods, and Goodman-Bacon decomposition to address heterogeneous treatment timing — with robustness checks including placebo tests, leave-one-out analysis, and permutation inference.",
+      tech: ["Python", "R", "Pandas", "NumPy", "Statsmodels", "Linearmodels", "Matplotlib", "Seaborn", "Plotly", "did (R)", "fixest (R)", "bacondecomp (R)", "Causal Inference", "Difference-in-Differences", "Synthetic Control"],
+      link: ""
+    },
+    {
       title: "SpatioTemporal Demand Forecasting & Experimental Optimization for Urban Mobility",
       description: "Built a spatiotemporal demand forecasting and experimentation framework using Citi Bike data. Developed Prophet, SARIMA, and XGBoost models to predict hourly demand, applied clustering and anomaly detection, and designed Bayesian and frequentist A/B experiments to evaluate ML-optimized rebalancing strategies.",
       tech: ["Python", "Pandas", "Scikit-learn", "XGBoost", "Prophet", "PyMC", "Folium", "Plotly", "Time Series Forecasting", "A/B Testing", "Geospatial Analysis"],
