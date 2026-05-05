@@ -12,7 +12,7 @@ const CONFIG = {
   medium: "https://medium.com/@bhardwajaditi203",
   github: "https://github.com/aditi-1996",
   kaggle: "https://kaggle.com/ad20iti",
-  resume: "https://drive.google.com/file/d/18yr1-TJmafsT4aUHjWOG_-GXxG74kRwK/view?usp=sharing", 
+  resume: "https://drive.google.com/file/d/1mnGrdG0sfjkjSudee8v9fROuGKoY6Ylg/view", 
   aboutMe: "Data Scientist with expertise spanning healthcare, public policy, and product analytics, building end-to-end pipelines, causal inference models, and machine learning solutions that translate complex data into measurable clinical, economic, and business impact.",
   
   experience: [
