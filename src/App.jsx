@@ -6,14 +6,14 @@ import { FaKaggle, FaMedium } from 'react-icons/fa6';
 const CONFIG = {
   name: "Aditi Bhardwaj",
   taglines: ["Data Scientist", "Health Informatics Expert", "ML Enthusiast", "Data-Driven Innovator"],
-  email: "bhardwajaditi20@outlook.com",
+  email: "bhardwajaditi203@gmail.com",
   phone: "+1 (317) 982-4562",
   linkedin: "https://linkedin.com/in/bhardwajaditi/",
   medium: "https://medium.com/@bhardwajaditi203",
   github: "https://github.com/aditi-1996",
   kaggle: "https://kaggle.com/ad20iti",
   resume: "https://drive.google.com/file/d/18yr1-TJmafsT4aUHjWOG_-GXxG74kRwK/view?usp=sharing", 
-  aboutMe: "Driven by a passion for leveraging data and machine learning to solve complex challenges in public health and healthcare. My expertise spans cohort analysis, time series modeling, multi-modal machine learning pipelines, and developing explainable AI solutions, primarily utilizing Python and the latest cloud technologies (AWS, GCP). I aim to translate complex data into actionable insights that drive significant clinical and economic impact.",
+  aboutMe: "Data Scientist with expertise spanning healthcare, public policy, and product analytics, building end-to-end pipelines, causal inference models, and machine learning solutions that translate complex data into measurable clinical, economic, and business impact.",
   
   experience: [
     { 
@@ -22,29 +22,39 @@ const CONFIG = {
       duration: "September 2023 - Present", 
       location: "Washington D.C.",
       bullets: [
-        "Performed cohort-based analysis of 2020-2023 clinical datasets on 10,000+ MedStar Health mother-infant dyads to estimate preterm birth reductions using Risk Stratification, Logistic Regression, and Generalized Linear Model, yielding 600+ avoided preterm cases and $30M+ in savings.",
-        "Quantified the ROI of MedStar Health's Safe Babies Safe Moms program by evaluating associated maternal and neonatal outcomes with risk-adjusted difference-in-differences analysis, validating findings through one-way sensitivity analyses to demonstrate cost-effectiveness of the program.",
-        "Created a state-level AI Readiness Index and an interactive dashboard on Google Cloud Platform (GCP) to visualize AI policy trends, utilizing Legiscan API with Python, Elasticsearch, and NLP techniques to classify state legislative documents and generate comparative insights on governance strategies across pilot states."
+        "Conducted cohort-based causal inference analysis on 10,000+ MedStar Health mother-infant dyads using Python and STATA, applying risk-adjusted difference-in-differences and sensitivity analyses to quantify the ROI of the Safe Babies Safe Moms program, estimating preterm birth reductions and multi-million-dollar savings.",
+        "Developed a three-layer AI Adoption Readiness Framework for state-level analysis, reviewing 11 national and international AI frameworks and applying NLP with the Legiscan API to classify state legislative documents, generating comparative insights across policy, infrastructure, and governance dimensions.",
+        "Built an end-to-end R data pipeline scraping school financial and academic data from ESSA Report Card portals, automating ingestion and transformation workflows, and deployed as an R Shiny app and Tableau dashboards to help policymakers identify high-ROI districts across U.S. states."
       ]
     },
     { 
-      title: "Data Scientist", 
+      title: "Data Analysis Intern",
       company: "Polis Center | Indiana University", 
-      duration: "June 2022 - May 2023", 
+      duration: "May 2022 - May 2023",
       location: "Indianapolis, IN",
       bullets: [
-        "Built R modules to compute community vulnerability scores and optimize public health resource allocation based on Social Assets and Vulnerability Indicators (SAVI), community data from American Community Survey (ACS), Indiana State Department of Health (ISDH), and the US Census Bureau Data.",
-        "Built a multivariate time series forecasting model and Tableau dashboards to monitor healthcare KPIs and detect anomalies in claim patterns, enabling policymakers to make data-driven decisions on resource allocation."
+        "Built R modules to compute community vulnerability scores and optimize public resource allocation based on Social Assets and Vulnerability Indicators (SAVI), integrating data from the American Community Survey, Indiana State Department of Health, and US Census Bureau.",
+        "Developed a multivariate time series forecasting model and Tableau dashboards to monitor KPIs and detect anomalies in claim patterns, enabling policymakers to make data-driven decisions on resource allocation."
       ]
     },
-    { 
-      title: "Data Scientist", 
-      company: "School of Dentistry | Indiana University", 
-      duration: "August 2021 - May 2022", 
+    {
+      title: "Graduate Research Assistant",
+      company: "Indiana University",
+      duration: "August 2021 - May 2022",
       location: "Indianapolis, IN",
       bullets: [
-        "Designed and implemented a multi-modal ML pipeline combining CNNs for dental radiographs with BERT-based NLP for EHR clinical notes, improving early disease detection accuracy by 80%.",
-        "Developed an ensemble ML model that leverages gradient boosting and SVM to identify social determinants of health (SDoH) affecting COVID-19, accurately predicting mortality rates with over 85% precision."
+        "Designed a multi-modal ML pipeline combining CNNs for dental radiographic imaging with BERT-based NLP for EHR clinical notes, improving early disease detection accuracy by 80%.",
+        "Developed a gradient boosting and SVM ensemble model to identify social determinants of health affecting COVID-19 mortality, achieving 85%+ precision across prediction tasks."
+      ]
+    },
+    {
+      title: "Software Development Senior Associate",
+      company: "NTT DATA Services",
+      duration: "July 2018 - July 2021",
+      location: "Noida, India",
+      bullets: [
+        "Executed complex SQL queries to extract, clean, and preprocess large-scale insurance datasets for exploratory data analysis, surfacing patterns to support strategic business decisions.",
+        "Developed a multivariate time series forecasting model for insurance claims and built Tableau dashboards to visualize trends, enabling leadership to forecast claim volumes and optimize resource planning."
       ]
     }
   ],
