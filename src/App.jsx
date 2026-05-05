@@ -54,7 +54,7 @@ const CONFIG = {
       location: "Noida, India",
       bullets: [
         "Executed complex SQL queries to extract, clean, and preprocess large-scale insurance datasets for exploratory data analysis, surfacing patterns to support strategic business decisions.",
-        "Developed a multivariate time series forecasting model for insurance claims and built Tableau dashboards to visualize trends, enabling leadership to forecast claim volumes and optimize resource planning."
+        "Built a claims forecasting system using temporal modeling techniques on structured insurance data and developed Tableau dashboards to surface trend patterns, supporting actuarial and operational planning across business units."
       ]
     }
   ],
