@@ -22,9 +22,9 @@ const CONFIG = {
       duration: "September 2023 - Present", 
       location: "Washington D.C.",
       bullets: [
-        "Conducted cohort-based causal inference analysis on 10,000+ MedStar Health mother-infant dyads using Python and STATA, applying risk-adjusted difference-in-differences and sensitivity analyses to quantify the ROI of the Safe Babies Safe Moms program, estimating preterm birth reductions and multi-million-dollar savings.",
-        "Developed a three-layer AI Adoption Readiness Framework for state-level analysis, reviewing 11 national and international AI frameworks and applying NLP with the Legiscan API to classify state legislative documents, generating comparative insights across policy, infrastructure, and governance dimensions.",
-        "Built an end-to-end R data pipeline scraping school financial and academic data from ESSA Report Card portals, automating ingestion and transformation workflows, and deployed as an R Shiny app and Tableau dashboards to help policymakers identify high-ROI districts across U.S. states."
+        "Conducted cohort-based analysis of 10,000+ MedStar Health mother-infant dyads using Python and STATA, applying causal inference methods including risk-adjusted difference-in-differences and sensitivity analysis to quantify ROI of the Safe Babies Safe Moms program, estimating preterm birth reductions and multi-million-dollar savings.",
+        "Developed a three-layer AI Adoption Readiness Framework (Alignment, Foundations, Governance) through macro-review of 11 national and international AI frameworks and built an NLP pipeline using Legiscan API and Elasticsearch with SVM-based threshold classification to identify relevant state legislation, generating a comparative California vs. Florida case study across policy, infrastructure, and governance dimensions.",
+        "Built an end-to-end R data platform scraping school financial and academic data from ESSA Report Card portals, deployed as an R Shiny app and Tableau dashboards to help policymakers identify high-ROI districts."
       ]
     },
     { 
@@ -40,7 +40,7 @@ const CONFIG = {
     {
       title: "Graduate Research Assistant",
       company: "Indiana University",
-      duration: "August 2021 - May 2022",
+      duration: "September 2021 - May 2022",
       location: "Indianapolis, IN",
       bullets: [
         "Designed a multi-modal ML pipeline combining CNNs for dental radiographic imaging with BERT-based NLP for EHR clinical notes, improving early disease detection accuracy by 80%.",
@@ -50,7 +50,7 @@ const CONFIG = {
     {
       title: "Software Development Senior Associate",
       company: "NTT DATA Services",
-      duration: "July 2018 - July 2021",
+      duration: "November 2018 - July 2021",
       location: "Noida, India",
       bullets: [
         "Executed complex SQL queries to extract, clean, and preprocess large-scale insurance datasets for exploratory data analysis, surfacing patterns to support strategic business decisions.",
