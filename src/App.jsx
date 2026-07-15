@@ -33,8 +33,7 @@ const CONFIG = {
       duration: "May 2022 - May 2023",
       location: "Indianapolis, IN",
       bullets: [
-        "Built R modules to compute community vulnerability scores and optimize public resource allocation based on Social Assets and Vulnerability Indicators (SAVI), integrating data from the American Community Survey, Indiana State Department of Health, and US Census Bureau.",
-        "Developed a multivariate time series forecasting model and Tableau dashboards to monitor KPIs and detect anomalies in claim patterns, enabling policymakers to make data-driven decisions on resource allocation."
+        "Developed reproducible R pipelines to analyze demographic, socioeconomic, and public health data (ACS, ISDH, U.S. Census), constructed Social Vulnerability and Deprivation Indices using factor analysis, and built Tableau dashboards to identify community disparities and support evidence-based resource allocation and policy planning."
       ]
     },
     {
@@ -43,8 +42,7 @@ const CONFIG = {
       duration: "September 2021 - May 2022",
       location: "Indianapolis, IN",
       bullets: [
-        "Designed a multi-modal ML pipeline combining CNNs for dental radiographic imaging with BERT-based NLP for EHR clinical notes, improving early disease detection accuracy by 80%.",
-        "Developed a gradient boosting and SVM ensemble model to identify social determinants of health affecting COVID-19 mortality, achieving 85%+ precision across prediction tasks."
+        "Performed literature-driven feature engineering by extracting and standardizing clinical and Social Determinants of Health (SDOH) variables from medical records and biomedical literature, creating structured datasets and taxonomies to support healthcare machine learning and predictive analytics."
       ]
     },
     {
